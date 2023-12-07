@@ -9,7 +9,7 @@ namespace TransitoRD.Core.Application.Dtos.MultasTipo
 {
     public class ResponseMultasTipoDto
     {
-        public int CodigoMulta { get; set; }
+        public  int Id { get; set; }
 
         public String descripcion { get; set; }
         public bool HasError { get; set; }

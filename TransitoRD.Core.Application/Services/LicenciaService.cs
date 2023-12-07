@@ -25,7 +25,11 @@ namespace TransitoRD.Core.Application.Services
             _ilicenciaRepository = ilicenciaRepository;
         }
 
-        
-
+        public async Task<ResponselicenciaDto> GetByLicenciaRequest(string licencia)
+        {
+            Licencia var = await _ilicenciaRepository.GetByLicenciaAsync(licencia);
+            ResponselicenciaDto vm = _mapper.Map<ResponselicenciaDto>(var);
+            return vm;
+        }
     }
 }

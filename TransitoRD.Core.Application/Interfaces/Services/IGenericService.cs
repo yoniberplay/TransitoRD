@@ -19,6 +19,8 @@ namespace TransitoRD.Core.Application.Interfaces.Services
 
         Task<RequestDto> GetByIdRequest(int id);
 
+        
+
         Task<List<ResponseDto>> GetAllResponse();
     }
 

@@ -9,6 +9,6 @@ namespace TransitoRD.Core.Application.Interfaces.Repositories
 {
     public interface ILicenciaRepository : IGenericRepository<Licencia>
     {
-
+        Task<Licencia> GetByLicenciaAsync(string licencia);
     }
 }

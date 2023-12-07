@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,10 @@ namespace TransitoRD.Infrastucture.Persistence.Repositories
             _dbContext = dbContext;
         }
 
-
-
+        public async Task<Licencia> GetByLicenciaAsync(string licencia)
+        {
+            var res = await _dbContext.Set<Licencia>().ToListAsync();
+            return res.FirstOrDefault(x => x.Cedula == licencia);
+        }
     }
 }

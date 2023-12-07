@@ -12,7 +12,7 @@ namespace TransitoRD.Core.Application.Interfaces.Services
 {
         public interface ILicenciaService : IGenericService<RequestlicenciaDto, ResponselicenciaDto, Licencia>
         {
-
-        }
+        Task<ResponselicenciaDto> GetByLicenciaRequest(string licencia);
+    }
     }
 
